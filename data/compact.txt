@@ -1,0 +1,212 @@
+
+## breakfast (9)
+cheese-omelette | Cheese Omelette | 45 | IMG | Cheese Omelette
+eggplant-fattah | Eggplant Fattah | 58 | IMG | Eggplant Fattah
+falafeel | Falafeel | 38 | IMG | Falafeel
+fried-eggs | Fried Eggs | 38 | IMG | Fried Eggs
+hummus-fatteh | Hummus Fatteh | 58 | IMG | Hummus , Fried Bread , Special Yoghurt Mixture , Nuts
+labaneh | Labaneh | 35 | IMG | Baladi Labneh , Olive Oil
+maxican-omelette | Maxican Omelette | 48 | IMG | Maxican Omelette
+mix-cheese-platter | Mix Cheese Platter | 78 | IMG | Mix Cheese Platter
+tomato-pan-qalllayah | Tomato Pan Qalllayah | 42 | IMG | Tomato Pan Qalllayah
+
+## burger-sandwich (8)
+chicken-sub | Chicken Sub | 78 | IMG | Chicken Breast , Mozzarella , Soy Sauce
+chicken-volcano | Chicken Volcano | 88 | IMG | Chicken Breast , Onion , Pepper , Mushroom , Cheese
+classic-burger | Classic Burger | 88 | IMG | 180G Meat, Tomatoes , Onions , Lettuce , Potatoes , Sauce
+classic-chicken-burger | Classic Chicken Burger | 88 | IMG | Chicken Breast , Mayonnaise , Pickles , Tomatoes , Lettuce
+fajitta | Fajitta | 78 | IMG | Beef Fillet , Onions , Colored Peppers , Mushrooms , Mozzarella Cheese , Sauce.
+mushroom-burger | Mushroom Burger | 92 | IMG | 180 Gm Meat , Mushroom Sauce , Cheese , Cheddar Slices
+philadelphia | Philadelphia | 78 | IMG | Beef Fillet , Onions , Colored Peppers , Mushrooms , Mozzarella Cheese , Sauce.
+zinger-burger | Zinger Burger | 92 | IMG | Cheddar , Sauce , Pickles , Cucumbers , Tomatoes , Lettuce , Jalapeno
+
+## cold-appetizers (19)
+basil-potatoes | Basil Potatoes | 38 | IMG | Potatoes , Onions , Basil , Olive Oil
+black-olives | Black Olives | 28 | IMG | Black Olive Plate
+bulgur-with-tomatoes | Bulgur With Tomatoes | 48 | IMG | Bulgur , Onion , Tomato , Garlic
+eggplant-moussaka | Eggplant Moussaka | 58 | IMG | Eggplant , Mixed Peppers , Tomatoes , Chickpeas
+eggplant-raheb | Eggplant Raheb | 42 | IMG | Grilled Eggplant , Lemon , Olive Oil , Vegetables
+green-olives | Green Olives | 28 | IMG | Green Olive Plate
+hummus-beirut | Hummus Beirut | 42 | IMG | Hummus , Tahini , Lemon ,  Garlic , Parsley , Cumin
+hummus-nuts | Hummus Nuts | 55 | IMG | Hummus , Tahini , Mixed Nuts
+hummus-pesto | Hummus Pesto | 42 | IMG | Hummus , Tahini , Pesto Sauce
+hummus-spicy | Hummus Spicy | 42 | IMG | Hummus , Tahini , Hot Pepper
+hummus-tahini | Hummus Tahini | 38 | IMG | Hummus , Tahini
+labneh-with-honey | Labneh With Honey | 38 | IMG | Labneh , Honey , Walnuts , Dried Figs
+mixed-pickles | Mixed Pickles | 25 | IMG | Cucumber , Kale , Hot Pepper , Olives
+mixed-vegetables | Mixed Vegetables | 25 | IMG | Mixed Vegetables
+muhammara | Muhammara | 48 | IMG | Walnuts , Olive Oil , Red Pepper
+mutabal-eggplant | Mutabal Eggplant | 38 | IMG | Grilled Eggplant  , Tahini  , Lemon
+otantik-mezza | Otantik Mezza | 48 | IMG | Otantik Mezza
+otantik-mutabal | Otantik Mutabal | 42 | IMG | Fried Eggplant , Mixed Vegetables , Green Onions , Pomegranate , Parsley
+vine-leaves-with-oil | Vine Leaves With Oil | 48 | IMG | Grape Leaves Stuffed With Rice , Vegetables , Olive Oil , Lemon
+
+## gril-master (24)
+arayes | Arayes | 98 | IMG | Bread  , Minced Meat , Tomato , Onion
+chicken-kabab | Chicken Kabab | 88 | IMG | Minced Chicken , Spices
+derry-kabab | Derry Kabab | 98 | IMG | Minced Meat , Onions
+grilled-chicken-wings-red-sauce | Grilled Chicken Wings / Red Sauce | 98 | IMG | Grilled Chicken Wings , Lemon , Garlic , Chili Served With Fries
+grilled-fish | Grilled Fish | 128 | IMG | Grilled Fish
+grilled-meat | Grilled Meat | 105 | IMG | Grilled Meat Cubs
+grilled-shish-tawouk-red-sauce | Grilled Shish Tawouk / Red Sauce | 98 | IMG | Grilled Chicken Cubes , Red Sauce , Served With Fries
+grilled-shrimps | Grilled Shrimps | 118 | IMG | Grilled Shrimps
+half-grilled-chicken-red-sauce | Half Grilled Chicken / Red Sauce | 128 | IMG | Grilled Chicken , Red Sauce , Served With Fries
+izmirli-kabab | Izmirli Kabab | 98 | IMG | Minced Meat , Cheese
+kaab-el-ghazal-kebab | Kaab El Ghazal Kebab | 98 | IMG | Minced Meat , Tahini Sauce
+kabab-with-eggplant | Kabab With Eggplant | 98 | IMG | Minced Meat , Eggplant
+kabab-with-nuts | Kabab With Nuts | 98 | IMG | Minced Meat , Nuts
+khashkhash-kabab | Khashkhash Kabab | 98 | IMG | Minced Meat , Garlic , Parsle Served On Tomato Sauce
+lamb-chops | Lamb Chops | 115 | IMG | Grilled Lamb Ribs
+levant-sausege-kabab | Levant Sausege Kabab | 98 | IMG | Minced Meat , Sausage Spices
+majouka | Majouka | 98 | IMG | Minced Meat Stuffed With Cheese And Nuts
+mix-grill | Mix Grill | 128 | IMG | Mix Grill
+mix-grill-2-person | Mix Grill 2 Person | 248 | IMG | Mix Grill 2 Person
+mix-grill-4-person | Mix Grill 4 Person | 499 | IMG | Mix Grill 4 Person
+orfali-kabab | Orfali Kabab | 98 | IMG | Minced Meat , Chili ,Tomato
+orginal-kabab | Orginal Kabab | 98 | IMG | Minced Meat , Parsley
+otantik-kebab | Otantik Kebab | 125 | IMG | Otantik Kebab
+toshka | Toshka | 98 | IMG | Bread  , Minced Meat , Cheese
+
+## hot-appetizers (21)
+chicken-liver | Chicken Liver | 58 | IMG | Chicken Liver ,  Garlic , Coriander , And Pomegranate Sauce
+chicken-ras-zarzor | Chicken Ras Zarzor | 58 | IMG | Chicken Breast , Butter , Paprika , Green Thyme
+fried-cheese-rolls | Fried Cheese Rolls | 48 | IMG | Fride Spring Rolls  With Cheese
+fried-kibbeh | Fried Kibbeh | 58 | IMG | Minced Meat With Bulgur
+fried-kibbeh-with-cherries | Fried Kibbeh With Cherries | 68 | IMG | Kibbeh Minced Meat And Cherry Sauce
+grilled-feta-cheese | Grilled Feta Cheese | 58 | IMG | Grilled Feta Cheese , Tomato Sauce , Mixed Vegetables
+hummus-chicken-shawarma | Hummus Chicken Shawarma | 58 | IMG | Hummus , Tahini , Chicken , Bread , Mix Vegetables
+hummus-qawarma | Hummus Qawarma | 58 | IMG | Hummus , Tahini , Cooked Meat , Nuts
+hummus-with-meat | Hummus With Meat | 58 | IMG | Hummus , Meat , Tahini , Nuts
+kofta-with-cherries | Kofta With Cherries | 68 | IMG | Kofta Minced Meat And Cherry Sauce
+kofta-with-pomegranate-sauce | Kofta With Pomegranate Sauce | 68 | IMG | Minced Meat  ,  Pomegranate Sauce
+lahmeh-rass-asfour | Lahmeh Rass Asfour | 68 | IMG | Meat Cubes With Lemon
+lemon-garlic-chicken-wings | Lemon Garlic Chicken Wings | 68 | IMG | Grilled Chicken Wings , Coriander , Garilc Sauce
+lemon-garlic-shrimp | Lemon Garlic Shrimp | 68 | IMG | Shirmp , Butter , Lemon
+mushroom-with-meat | Mushroom With Meat | 68 | IMG | Minced Meat ,  Mushrooms , Spices
+pesto-meat | Pesto Meat | 68 | IMG | Meat , Cream , Pesto Sauce
+sambousek-cheese | Sambousek Cheese | 48 | IMG | Fried Pastry With Cheese
+sambousek-meat | Sambousek Meat | 58 | IMG | Fried Pastry With Meat
+shrimp-provencale | Shrimp Provencale | 68 | IMG | Shrimp , Lemon , Coriander , Garlic
+spiced-potato | Spiced Potato | 35 | IMG | Frid Potato Cubes , Garilc , Coriander
+zahrat-with-tahini | Zahrat With Tahini | 58 | IMG | Tahini Sauce , Fried Cauliflower , Nuts
+
+## main-beef (7)
+beef-stroganoff | Beef Stroganoff | 108 | IMG | Meat , Onions , Mushrooms , Mustard , Cream
+beef-tacos | Beef Tacos | 108 | IMG | Beef Tacos
+cheddar-steak | Cheddar Steak | 128 | IMG | French Fries , Meat Piece , Vegetables , Cheddar Sauce
+mushroom-steak | Mushroom Steak | 128 | IMG | Puree Potatoes , Vegetables , With Mushroom Sauce
+pepper-steak | Pepper Steak | 128 | IMG | Pepper Sauce , Puree Potatoes , Vegetables
+senape-steak | Senape Steak | 128 | IMG | Mustard Seeds , Cream , Puree Potatoes , Vegetables
+steak-cafe-de-paris | Steak Café De Paris | 128 | IMG | Salad , Potatoes , Steak , Sauce
+
+## main-chicken (12)
+butter-chicken | Butter Chicken | 105 | IMG | Chicken Pieces , Butter Sauce , Tomatoes , White Rice
+chicken-broccoli | Chicken Broccoli | 118 | IMG | Chicken Breast , Onion , Mushroom , Pepper , Ketchup
+chicken-curry | Chicken Curry | 105 | IMG | Chicken Pieces , Mushrooms , Pineapple , White Rice , Curry Sauce
+chicken-escalope | Chicken Escalope | 108 | IMG | Chicken Escalope , Potatoes , Salad
+chicken-lemon | Chicken Lemon | 118 | IMG | Chicken , French Fries , Sauteed Vegetables , Cream Sauce , Lemon
+chicken-mushroom | Chicken Mushroom | 118 | IMG | Chicken Breast , Pureed Potatoes , Sauteed Vegetables , Mushroom Sauce
+chicken-pesto | Chicken Pesto | 118 | IMG | Chicken Breast , Pureed Potatoes , Sauteed Vegetables , Pesto Sauce
+chicken-stroganoff | Chicken Stroganoff | 108 | IMG | Chicken , White Rice , Onion , Mushroom , Cream , Soy , Mustard.
+chicken-tacos | Chicken Tacos | 98 | IMG | Chicken Tacos
+fajita-lava | Fajita Lava | 98 | IMG | Colored Peppers ,  Onions ,  Mushrooms ,  Hot Sauce (With Guacamole Sauce , Sour Cream ,  Mexican Sauce)
+grilled-chicken | Grilled Chicken | 118 | IMG | Grilled Chicken Breast , Salad , Potato Wedges
+thai-chicken | Thai Chicken | 98 | IMG | Chicken Fingers , Noodles , Onions, Mushrooms, Carrots , Colored Peppers , Sesame Oil  , Soy.
+
+## main-fish (7)
+curry-shrimp | Curry Shrimp | 98 | IMG | Shrimp , Curry Sauce , White Rice
+fish-filet | Fish Filet | 98 | IMG | Fish Fillet , Puree , Vegetables , Sauce
+grilled-salmon | Grilled Salmon | 148 | IMG | Grilled Salmon , Purée , And Sauteed Vegetables.
+salmon-cafe-de-paris | Salmon Cafe De Paris | 148 | IMG | Sharhat Lahem
+sea-bass-fish | Sea Bass Fish | 98 | IMG | Seabass Fish , Cream Sauce ,  Lemon
+shrimp-cream-garlic | Shrimp Cream Garlic | 88 | IMG | Shrimp , Cream , Garlic , Parmesan , Toasted Bread
+teriyaki-salmon | Teriyaki Salmon | 148 | IMG | Salmon , Noodles With Vegetables , Teriyaki Sauce , Sesame
+
+## manakish (17)
+chicken-with-vegetables-pie | Chicken With Vegetables Pie | 68 | IMG | Chicken With Vegetables On Dough
+egg-pie | Egg Pie | 78 | IMG | Egg On Dough
+halloum-pie | Halloum Pie | 68 | IMG | Haloum Cheese, Cherry tomato
+labneh-pie-with-vegetables | Labneh Pie With Vegetables | 58 | IMG | Labneh , Cucumber , Tomato , Olives
+mjarmasheh-cheese | Mjarmasheh Cheese | 78 | IMG | Mjarmasheh Cheese
+mjarmasheh-pie | Mjarmasheh Pie | 68 | IMG | Mjarmasheh Pie
+muhammara-pie-with-qashqawan-cheese | Muhammara Pie With Qashqawan Cheese | 68 | IMG | Muhammara Pie With Qashqawan Cheese
+pita-bread-1-pcs | Pita Bread 1 Pcs | 6 | IMG | Pita Bread 1 Pcs
+pita-bread-5-pcs | Pita Bread 5 Pcs | 25 | IMG | Pita Bread 5 Pcs
+sausage-pie | Sausage Pie | 78 | IMG | Sausage Pie
+sfeeha-shamyia-pie-with-labn | Sfeeha Shamyia Pie With Labn | 68 | IMG | Sfeeha Shamyia Pie With Labn
+sfeeha-shamyia-pie-with-meat-and-tomato | Sfeeha Shamyia Pie With Meat And Tomato | 68 | IMG | Minced Meat With Tomatoes And Onions On Dough
+shabatlya-pie | Shabatlya Pie | 88 | IMG | White cheese, Qashqawan Cheese
+sharhat-lahem | Sharhat Lahem | 78 | IMG | Sharhat Lahem
+spinach-pie | Spinach Pie | 68 | IMG | Spinach Pie
+zaatar-pie | Zaatar Pie | 58 | IMG | Zaatar Pie
+zaatar-pie-with-qashqawan-cheese | Zaatar Pie With Qashqawan Cheese | 78 | IMG | Zaatar Pie With Qashqawan Cheese
+
+## pasta (14)
+chicken-parmigiana | Chicken Parmigiana | 118 | IMG | Chicken Escalope , Tomato Sauce , Spaghetti , Mozzarella
+fettuccine-alfredo | Fettuccine Alfredo | 88 | IMG | Fettuccine Pasta , Mushroom , Chicken , Cream , Parmesan
+fettuccine-pesto | Fettuccine Pesto | 88 | IMG | Fettuccine Pasta , Mushroom , Crispy Chicken , Cream , Basil Sauce
+fettuccine-seafood | Fettuccine Seafood | 98 | IMG | Fettuccine Pasta , Spicy Tomato Sauce , Seafood
+lasagna-beef | Lasagna Beef | 88 | IMG | Lasagna , Bechame L, Cheese
+linguine-shrimp-saffron | Linguine Shrimp Saffron | 98 | IMG | Pasta , Shrimp , Cream , Saffron , Parmesan
+macaroni-chicken | Macaroni Chicken | 98 | IMG | Chicken Escalope , Pasta , Sauce
+pasta-penne-with-cheese | Pasta Penne With Cheese | 78 | IMG | Pasta Sticks , Parmesan Cheese ,  Emmental Cheese , Brie Cheese ,  Roquefort Cheese
+penne-arrabiata | Penne Arrabiata | 78 | IMG | Pasta , Spicy Tomato Sauce , Basil
+penne-three-salsa | Penne Three Salsa | 78 | IMG | Pasta , Tomato Sauce , Cream Sauce , Pesto Sauce , Parmesan Cheese
+ravioli-pesto | Ravioli Pesto | 88 | IMG | Ravioli Pasta , Cream , Saffron , Parmesan
+risotto-mushroom | Risotto Mushroom | 88 | IMG | Three Types Of Mushrooms , Rice , Cream , Butter ,  Parmesan
+risotto-shrimp | Risotto Shrimp | 98 | IMG | Italian Rice , Shrimp , Pesto , Butter , Parmesan
+spaghetti-bolognese | Spaghetti Bolognese | 78 | IMG | Pasta , Tomato Sauce With Meat , Parmesan Cheese
+
+## pizza (6)
+4-cheese | 4 Cheese | 98 | IMG | Mozzarella , Gorgonzola, Parmigiana Reggiano, Goat Cheese
+fettuccine-pesto-2 | Fettuccine Pesto | 88 | IMG | Fettuccine Pasta , Mushroom, Crispy Chicken , Cream, Basil Sauce
+margherita | Margherita | 78 | IMG | Fresh Mozzarella , Fresh Basil , San Marzano Tomatoes
+pepperoni | Pepperoni | 88 | IMG | Sliced Pepperoni ,Cheese, Crushed Tomatoes with Basil
+pesto | Pesto | 88 | IMG | Pesto , cheese , Dry tomato , Pine Nuts.
+seafood | Seafood | 118 | IMG | Cheese , Smoked salmon , Shrimp, Tomato sauce
+
+## salads (14)
+arabic-salad | Arabic Salad | 48 | IMG | Cucumber , Green Pepper , Tomato , Lettuce
+burrata-salad | Burrata Salad | 78 | IMG | Burrata Cheese , Lettuce  , Apple  , Mix Cherry Tomatoes
+chicken-caesar-salad | Chicken Caesar Salad | 68 | IMG | Iceberg Lettuce , Cherry Tomato , Cheese , Chicken , Toast
+crab-noodle-salad | Crab Noodle Salad | 78 | IMG | Noodles , Crab , Cherry Tomatoes , Carrots ,  Cucumbe R,  Avocado , Caviar, Lettuce.
+fatoush | Fatoush | 48 | IMG | Mixed Vegetables , Mint , Toast , Grild Cheese
+garden-salad | Garden Salad | 48 | IMG | Lettuce , Vegetables , Walnuts , Pomegranate , Cherry Tomato
+haloum-fatoush | Haloum Fatoush | 58 | IMG | Mixed Vegetables,Herbs And Mint Bread Bread Cheese
+jabal-alnour-salad | Jabal Alnour Salad | 58 | IMG | Cucumber , Tomatoes , Latus , Green Pepper , Walnuts
+otantik-rocca | Otantik Rocca | 58 | IMG | Rocca , Onion , Tomato , Pomegranate , Quinoa , Cheese
+pasta-salad | Pasta Salad | 68 | IMG | Colored Pasta  ,  Corn  ,  Colored Pepper  ,  Palm Pulp ,  Cucumber  ,  Cherry Tomatoes  ,  Shredded Carrots.
+quinoa-salad | Quinoa Salad | 78 | IMG | Avocado , Mango , Kiwi , Colored Pepper , Quinoa , Tomato
+shrimp-salad | Shrimp Salad | 78 | IMG | Avocado , Mango , Shrimp , Pomegranate
+tabouleh | Tabouleh | 48 | IMG | Tomatoes , Onions , Parsley
+tabouleh-quinoa | Tabouleh Quinoa | 58 | IMG | Tomatoes , Onions , Parsley , Pomegranate , Apple , Cucumber
+
+## side-appetizers (18)
+bbq-chicken-wings | Bbq Chicken Wings | 58 | IMG | Chicken Wings ,  Barbecue Sauce
+buffalo-chicken-wings | Buffalo Chicken Wings | 58 | IMG | Chicken Wings ,  Chili Sauce
+calamari-rings | Calamari Rings | 68 | IMG | Fried Calamari , Tartar Sauce
+chicken-popcorn | Chicken Popcorn | 68 | IMG | Fried Chicken Pieces
+chicken-tender | Chicken Tender | 88 | IMG | Chicken Pane , Special Sauce
+chicken-teriyaki | Chicken Teriyaki | 88 | IMG | Chicken Cups , Teriyaki Sauce , Sesame
+chicken-wings-sweet-chili | Chicken Wings Sweet Chili | 58 | IMG | Chicken Wings , Chili , Sweet Chili
+dynamite-chicken | Dynamite Chicken | 78 | IMG | Chicken , Dynamite Sauce , Sesame
+dynamite-shrimp | Dynamite Shrimp | 78 | IMG | Shrimp , Dynamite Sauce , Sesame
+french-fries | French Fries | 58 | IMG | Fried Potato
+grilled-halloumi-bite | Grilled Halloumi Bite | 68 | IMG | Baguette Bread ,  Grilled Halloumi , Mango ,  Pesto Sauce
+mozzarella-sticks | Mozzarella Sticks | 68 | IMG | Fried Mozzarella Cheese , Tartar Sauce
+potato-wedges | Potato Wedges | 58 | IMG | Fried Potato Wedges
+shrimp-butterfly | Shrimp Butterfly | 78 | IMG | Fried Shrim , Tartar Sauce
+shrimp-rolls | Shrimp Rolls | 78 | IMG | Fried Shrimp , Tartar Sauce
+smoked-salmon | Smoked Salmon | 98 | IMG | Smoked Salmon ,  Lemon, Cucumber , Mixed Lettuce , Bread
+tartar-salmon | Tartar Salmon | 88 | IMG | Onions , Lemon , Mango , Avocado
+tuna-tartare | Tuna Tartare | 88 | IMG | Tuna Tartare , Pickles , Cucumber ,  Onion ,  Mint , Mayonnaise
+
+## sweet-products (8)
+barazek | barazek | 118 | IMG | The round-shaped sesame-covered Barazek is one of the most famous Arab desserts made with flour sugar milk yeast sesame & Pistachios.
+ghraibah | GHRAIBAH | 118 | IMG | famous for its buttery-flavored fluffy dough. A delicious multi bite piece that melts in your mouth
+mabrome | Mabrome | 239 | IMG | String like dough rolled with pistachio, deep fried until crispy and golden brown color and sweetened with our special sweet syrup.
+mix-baklava-1000-g | Mix baklava 1000 g | 388 | IMG | A wonderful combination of five different pastries in bite size pieces. Mini Burma Pistachio, Pistachio Rolls, Mini Baklava Pistachio, Mini Osh Al-Bulbul Pistachio, Kol Wish-Kor Pistachio
+mix-baklava-350-g | Mix baklava 350 g | 166 | IMG | A wonderful combination of five different pastries in bite size pieces. Mini Burma Pistachio, Pistachio Rolls, Mini Baklava Pistachio, Mini Osh Al-Bulbul Pistachio, Kol Wish-Kor Pistachio
+mix-baklava-500-g | Mix baklava 500 g | 204 | IMG | A wonderful combination of five different pastries in bite size pieces. Mini Burma Pistachio, Pistachio Rolls, Mini Baklava Pistachio, Mini Osh Al-Bulbul Pistachio, Kol Wish-Kor Pistachio
+mix-baklava-750-g | Mix baklava 750 g | 296 | IMG | A wonderful combination of five different pastries in bite size pieces. Mini Burma Pistachio, Pistachio Rolls, Mini Baklava Pistachio, Mini Osh Al-Bulbul Pistachio, Kol Wish-Kor Pistachio
+osh-bulbuls | osh bulbul&#8217;s | 149 | IMG | This delicious sweet is made of finely shredded spun lace pastry dough, filled with whole pistachios and baked to a golden brown color then sealed with our special sweet syrup.

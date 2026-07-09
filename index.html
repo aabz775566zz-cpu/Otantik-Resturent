@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Otantik — روح الشام · The Soul of Levant</title>
+<meta name="description" content="مطعم أوتانتيك — مطبخ شامي أصيل على نار الفحم في قلب قوانغتشو. Authentic Levantine charcoal cooking in Guangzhou.">
+<meta property="og:title" content="Otantik — The Soul of Levant · Guangzhou">
+<meta property="og:description" content="Authentic Levantine cooking over live charcoal — 183 dishes, all halal.">
+<meta property="og:image" content="assets/img/poster-hero-grill.jpg">
+<link rel="icon" type="image/png" href="assets/img/logo-mark.png">
+<link rel="stylesheet" href="css/fonts.css">
+<link rel="stylesheet" href="css/main.css">
+</head>
+<body data-page="home">
+
+<div id="progress"></div>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html" aria-label="Otantik">
+      <img class="mark" src="assets/img/logo-mark.png" alt="">
+      <img class="word" src="assets/img/logo.png" alt="Otantik Restaurant">
+    </a>
+    <nav class="main-nav" aria-label="Main">
+      <a href="index.html" class="active" data-i18n="nav.home"></a>
+      <a href="menu.html" data-i18n="nav.menu"></a>
+      <a href="#story" data-i18n="nav.story"></a>
+      <a href="#reserve" data-i18n="nav.reserve"></a>
+      <a href="#contact" data-i18n="nav.contact"></a>
+    </nav>
+    <div class="header-actions">
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button data-lang="ar">عربي</button>
+        <button data-lang="en">EN</button>
+        <button data-lang="zh">中文</button>
+      </div>
+      <a class="btn btn-ghost btn-sm" href="#reserve" data-i18n="cta.reserve"></a>
+      <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-nav">
+  <button class="close-nav" aria-label="Close">✕</button>
+  <a href="index.html" data-i18n="nav.home"></a>
+  <a href="menu.html" data-i18n="nav.menu"></a>
+  <a href="#story" data-i18n="nav.story"></a>
+  <a href="#contact" data-i18n="nav.contact"></a>
+  <a class="btn btn-solid" href="#reserve" data-i18n="cta.reserve"></a>
+</div>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="hero-media" data-parallax="6">
+    <video autoplay muted loop playsinline preload="auto" poster="assets/img/poster-hero-grill.jpg">
+      <source src="assets/video/hero-grill.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="hero-scrim"></div>
+  <canvas id="embers"></canvas>
+  <div class="hero-content wrap">
+    <img class="hero-mark rv" src="assets/img/logo-mark.png" alt="">
+    <p class="hero-kicker rv" data-i18n="hero.kicker"></p>
+    <h1 class="hero-title gold-text" data-i18n="hero.title"></h1>
+    <p class="hero-sub rv" data-rv-delay="0.3" data-i18n="hero.sub"></p>
+    <div class="hero-ctas rv" data-rv-delay="0.45">
+      <a class="btn btn-solid" href="menu.html" data-i18n="cta.menu"></a>
+      <a class="btn btn-ghost" href="#reserve" data-i18n="cta.reserve"></a>
+    </div>
+  </div>
+  <div class="scroll-cue" aria-hidden="true"></div>
+</section>
+
+<!-- ================= MARQUEE ================= -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track" id="marquee-track"></div>
+</div>
+
+<!-- ================= SIGNATURES ================= -->
+<section class="section" id="signatures">
+  <div class="wrap">
+    <p class="eyebrow rv" data-i18n="sig.eyebrow"></p>
+    <h2 class="h2 rv" data-i18n="sig.title"></h2>
+    <div class="sig-rows" id="sig-rows"><!-- rendered by JS from menu data --></div>
+  </div>
+</section>
+
+<!-- ================= FIRE STRIP ================= -->
+<section class="fire-strip">
+  <div class="fire-media" data-parallax="10">
+    <video autoplay muted loop playsinline preload="metadata" poster="assets/img/poster-kebab.jpg">
+      <source src="assets/video/kebab-smoke.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="scrim"></div>
+  <div class="fire-quote">
+    <blockquote class="rv" data-i18n="fire.quote"></blockquote>
+    <p class="who rv" data-rv-delay="0.2" data-i18n="fire.who"></p>
+  </div>
+</section>
+
+<!-- ================= STORY ================= -->
+<section class="section" id="story">
+  <div class="wrap story-grid">
+    <div class="story-media rv glow">
+      <img src="assets/img/poster-mezze.jpg" alt="Levantine mezze table" loading="lazy">
+    </div>
+    <div class="story-body">
+      <p class="eyebrow rv" data-i18n="story.eyebrow"></p>
+      <h2 class="h2 rv" data-i18n="story.title"></h2>
+      <p class="lead rv" data-rv-delay="0.15" data-i18n="story.body"></p>
+      <div class="story-facts rv" data-rv-delay="0.3">
+        <div class="fact"><div class="f-num" data-i18n="story.f1n"></div><div class="f-label" data-i18n="story.f1l"></div></div>
+        <div class="fact"><div class="f-num" data-i18n="story.f2n"></div><div class="f-label" data-i18n="story.f2l"></div></div>
+        <div class="fact"><div class="f-num" data-i18n="story.f3n"></div><div class="f-label" data-i18n="story.f3l"></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CATEGORY TEASER ================= -->
+<section class="section" id="categories" style="padding-top:0">
+  <div class="wrap">
+    <p class="eyebrow rv" data-i18n="cats.eyebrow"></p>
+    <h2 class="h2 rv" data-i18n="cats.title"></h2>
+    <div class="cat-grid" id="cat-grid"><!-- rendered by JS --></div>
+    <div class="menu-cta-row rv"><a class="btn btn-solid" href="menu.html" data-i18n="cta.fullmenu"></a></div>
+  </div>
+</section>
+
+<!-- ================= CINEMA (bottom promos) ================= -->
+<section class="section cinema" id="cinema">
+  <div class="wrap">
+    <p class="eyebrow rv" data-i18n="cinema.eyebrow"></p>
+    <h2 class="h2 rv" data-i18n="cinema.title"></h2>
+    <div class="cinema-grid">
+      <figure class="clip glow rv">
+        <video autoplay muted loop playsinline preload="metadata" poster="assets/img/poster-hero-grill.jpg">
+          <source src="assets/video/hero-grill.mp4" type="video/mp4">
+        </video>
+        <div class="veil"></div>
+        <figcaption class="clip-label" data-i18n="cinema.c1"></figcaption>
+      </figure>
+      <figure class="clip glow rv" data-rv-delay="0.1">
+        <video autoplay muted loop playsinline preload="metadata" poster="assets/img/poster-mezze.jpg">
+          <source src="assets/video/mezze-table.mp4" type="video/mp4">
+        </video>
+        <div class="veil"></div>
+        <figcaption class="clip-label" data-i18n="cinema.c2"></figcaption>
+      </figure>
+      <figure class="clip glow rv" data-rv-delay="0.15">
+        <video autoplay muted loop playsinline preload="metadata" poster="assets/img/poster-kebab.jpg">
+          <source src="assets/video/kebab-smoke.mp4" type="video/mp4">
+        </video>
+        <div class="veil"></div>
+        <figcaption class="clip-label" data-i18n="cinema.c3"></figcaption>
+      </figure>
+      <figure class="clip glow rv" data-rv-delay="0.2">
+        <video autoplay muted loop playsinline preload="metadata" poster="assets/img/poster-baklava.jpg">
+          <source src="assets/video/baklava-tea.mp4" type="video/mp4">
+        </video>
+        <div class="veil"></div>
+        <figcaption class="clip-label" data-i18n="cinema.c4"></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ================= RESERVE ================= -->
+<section class="section reserve" id="reserve">
+  <div class="wrap reserve-grid">
+    <div class="reserve-info">
+      <p class="eyebrow rv" data-i18n="res.eyebrow"></p>
+      <h2 class="h2 rv" data-i18n="res.title"></h2>
+      <p class="lead rv" data-i18n="res.sub"></p>
+      <div class="contact-lines rv">
+        <div class="c-line"><span class="ico">✆</span><a href="tel:+8617137666662" dir="ltr">+86 171 3766 6662</a></div>
+        <div class="c-line"><span class="ico">✆</span><a href="tel:+8617137666663" dir="ltr">+86 171 3766 6663</a></div>
+        <div class="c-line"><span class="ico">✉</span><a href="mailto:info@otantikrestaurant.com">info@otantikrestaurant.com</a></div>
+        <div class="c-line"><span class="ico">◈</span><span data-i18n="foot.addr"></span></div>
+        <div class="c-line"><span class="ico">◷</span><span data-i18n="foot.hours"></span></div>
+      </div>
+    </div>
+    <form class="res-form rv" id="res-form" novalidate>
+      <div class="form-fields">
+        <div class="form-grid">
+          <div class="field"><label for="rf-name" data-i18n="res.name"></label><input id="rf-name" name="name" type="text" required autocomplete="name" placeholder=" "></div>
+          <div class="field"><label for="rf-phone" data-i18n="res.phone"></label><input id="rf-phone" name="phone" type="tel" required autocomplete="tel" placeholder=" " dir="ltr"></div>
+          <div class="field"><label for="rf-date" data-i18n="res.date"></label><input id="rf-date" name="date" type="date" required></div>
+          <div class="field"><label for="rf-time" data-i18n="res.time"></label><input id="rf-time" name="time" type="time" required min="08:00" max="20:00" value="19:00"></div>
+          <div class="field full"><label for="rf-guests" data-i18n="res.guests"></label>
+            <select id="rf-guests" name="guests">
+              <option value="1" data-i18n="g1"></option>
+              <option value="2" selected data-i18n="g2"></option>
+              <option value="3" data-i18n="g3"></option>
+              <option value="4" data-i18n="g4"></option>
+              <option value="5" data-i18n="g5"></option>
+              <option value="6" data-i18n="g6"></option>
+              <option value="7+" data-i18n="g7"></option>
+            </select>
+          </div>
+          <div class="field full"><label for="rf-note" data-i18n="res.note"></label><input id="rf-note" name="note" type="text" placeholder=" "></div>
+        </div>
+        <button class="btn btn-solid" type="submit" data-i18n="res.submit"></button>
+        <p class="form-note" data-i18n="res.notetext"></p>
+      </div>
+      <div class="form-success" role="status">
+        <div class="big" data-i18n="res.okbig"></div>
+        <p data-i18n="res.oktext"></p>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer" id="contact">
+  <div class="wrap foot-center">
+    <img class="lockup" src="assets/img/logo-lockup.png" alt="Otantik — Levantine Cuisine">
+    <p class="foot-tag" data-i18n="foot.tag"></p>
+    <div class="foot-orn" aria-hidden="true"><span></span>✦<span></span></div>
+    <p class="foot-addr" data-i18n="foot.addr"></p>
+    <div class="foot-meta">
+      <span data-i18n="foot.hours"></span>
+      <span class="dot">·</span>
+      <a href="tel:+8617137666662" dir="ltr">+86 171 3766 6662</a>
+      <span class="dot">·</span>
+      <a href="mailto:info@otantikrestaurant.com">info@otantikrestaurant.com</a>
+    </div>
+    <div class="halal-badge">☾ <span data-i18n="foot.halal"></span></div>
+    <div class="footer-base">
+      <span data-i18n="foot.rights"></span>
+      <span class="gold-text" data-i18n="foot.soul"></span>
+    </div>
+  </div>
+</footer>
+
+<nav class="action-bar" aria-label="Quick actions">
+  <div class="ab-inner">
+    <a href="tel:+8617137666662">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.4 2.1L8.1 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.6 2z"/></svg>
+      <span data-i18n="ab.call"></span>
+    </a>
+    <a class="ab-primary" href="#reserve">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      <span data-i18n="cta.reserve"></span>
+    </a>
+    <a href="menu.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h18"/><path d="M3 12h18"/><path d="M3 18h12"/></svg>
+      <span data-i18n="nav.menu"></span>
+    </a>
+  </div>
+</nav>
+
+<script src="js/vendor/gsap.min.js"></script>
+<script src="js/vendor/ScrollTrigger.min.js"></script>
+<script src="js/vendor/lenis.min.js"></script>
+<script src="js/menu-data.js"></script>
+<script src="js/main.js"></script>
+<script>
+/* home-only rendering: signatures, category cards, marquee (localized) */
+(function () {
+  var SIG_SLUGS = ["lamb-chops", "otantik-kebab", "mix-grill-2-person"];
+  var CAT_CARDS = [
+    { id: "cold", img: "assets/img/menu/hummus-beirut.jpg" },
+    { id: "grill", img: "assets/img/menu/lamb-chops.jpg" },
+    { id: "manakish", img: "assets/img/menu/zaatar-pie.jpg" },
+    { id: "salads", img: "assets/img/menu/fatoush.jpg" },
+    { id: "pasta", img: "assets/img/menu/linguine-shrimp-saffron.jpg" },
+    { id: "sweets", img: "assets/img/menu/mix-baklava-350-g.jpg" }
+  ];
+  var MENU = window.OTANTIK_MENU;
+
+  function renderHome() {
+    var L = window.OTANTIK_I18N.lang;
+    var t = window.OTANTIK_I18N.t;
+
+    var rows = document.getElementById("sig-rows");
+    if (rows && MENU) {
+      rows.innerHTML = SIG_SLUGS.map(function (slug, i) {
+        var it = MENU.items.filter(function (x) { return x.slug === slug; })[0];
+        if (!it) return "";
+        return '<div class="sig-row">' +
+          '<span class="sig-ghost" aria-hidden="true">0' + (i + 1) + '</span>' +
+          '<div class="sig-media rv glow"><img src="' + it.img + '" alt="' + it.name[L] + '" loading="lazy" data-fv-cap="' + it.name[L] + '  ·  ¥' + it.price + '"></div>' +
+          '<div class="sig-body">' +
+            '<div class="num rv">0' + (i + 1) + '</div>' +
+            '<h3 class="rv">' + it.name[L] + "</h3>" +
+            '<p class="rv">' + it.desc[L] + "</p>" +
+            '<div class="rv"><span class="sig-price">¥' + it.price + '</span>' +
+            '<a class="sig-link" href="menu.html#' + it.slug + '">' + t("sig.link") + " ↗</a></div>" +
+          "</div></div>";
+      }).join("");
+    }
+
+    var grid = document.getElementById("cat-grid");
+    if (grid && MENU) {
+      grid.innerHTML = CAT_CARDS.map(function (cc) {
+        var c = MENU.categories.filter(function (x) { return x.id === cc.id; })[0];
+        var n = MENU.items.filter(function (x) { return x.cat === cc.id; }).length;
+        return '<a class="cat-card rv glow" href="menu.html#' + cc.id + '">' +
+          '<img src="' + cc.img + '" alt="' + c.name[L] + '" loading="lazy">' +
+          '<div class="veil"></div>' +
+          '<div class="cc-label"><span class="cc-name">' + c.name[L] + '</span><span class="cc-count">' + n + " " + t("cats.dishes") + "</span></div>" +
+        "</a>";
+      }).join("");
+    }
+
+    var mq = document.getElementById("marquee-track");
+    if (mq && MENU) {
+      var names = ["lamb-chops", "hummus-beirut", "otantik-kebab", "fatoush", "muhammara", "zaatar-pie", "grilled-salmon", "mix-baklava-350-g", "vine-leaves-with-oil", "toshka"]
+        .map(function (s) {
+          var it = MENU.items.filter(function (x) { return x.slug === s; })[0];
+          return it ? it.name[L] : "";
+        }).filter(Boolean);
+      var half = names.map(function (n) { return "<span>" + n + "</span>"; }).join("");
+      mq.innerHTML = half + half; /* duplicated for seamless loop */
+    }
+
+    /* re-run reveal animation binding for newly injected .rv nodes */
+    if (window.gsap && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      document.querySelectorAll("#sig-rows .rv, #cat-grid.rv, #cat-grid .rv").forEach(function (el) {
+        gsap.fromTo(el, { opacity: 0, y: 34 }, {
+          opacity: 1, y: 0, duration: 1.05, ease: "power3.out",
+          scrollTrigger: { trigger: el, start: "top 90%", once: true }
+        });
+      });
+      if (window.ScrollTrigger) ScrollTrigger.refresh();
+    } else {
+      document.querySelectorAll("#sig-rows .rv, #cat-grid .rv").forEach(function (el) {
+        el.style.opacity = 1; el.style.transform = "none";
+      });
+    }
+  }
+
+  document.addEventListener("otantik:lang", renderHome);
+  document.addEventListener("DOMContentLoaded", renderHome);
+
+  /* tap a signature dish photo → full-screen view */
+  document.addEventListener("click", function (e) {
+    var img = e.target.closest(".sig-media img");
+    if (img && window.OTANTIK_FULLVIEW) {
+      window.OTANTIK_FULLVIEW(img.getAttribute("src"), img.getAttribute("data-fv-cap") || "");
+    }
+  });
+})();
+</script>
+</body>
+</html>
