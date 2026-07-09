@@ -35,3 +35,13 @@ Baseline: pass 2. User confirmed: glow+ripple touch effect, bottom action bar, h
 - **Copy rewritten bold & spare** in all three languages — e.g. hero: "نار البلوط. بهارات الشام. طاولة لا تُنسى." / "Oak fire. Damascus spice. A table you will not forget." Fire quote: "The embers never hurry. Neither do we."
 
 Verified at 375px (AR + EN), sheet + reels + bar all functioning, desktop unchanged (Lenis active, bar hidden, editorial rows restored), zero console errors.
+
+## Pass 4 — 2026-07-09 (user-directed)
+User feedback: site looked dull/flat, no way to see a dish full-screen, footer was cluttered.
+
+- **Vibrancy pass**: every photo and video across the site (hero, fire strip, category cards, dish thumbnails, signature rows, cinema clips, lightbox) now carries a `saturate()/brightness()` boost, hover states push further into richer color, scrims lightened so footage reads brighter, ambient background glow strengthened, buttons/eyebrows/marquee text gained gold glow and gradient depth. The palette itself didn't change — the *rendering* of it did.
+- **Full-screen dish viewer**: new `#fullview` overlay — tap any dish photo (signature rows on the homepage, or the expand button on the menu lightbox) to see it edge-to-edge at full resolution with a caption, close button, and Esc/backdrop dismiss.
+- **Footer rebuilt**: replaced the 3-column list-heavy layout with one calm centered block — logo lockup, tagline, ornamental divider, address, a single contact line, halal badge, rights line. Same information, far less visual noise.
+- **Real bug found and fixed during verification**: the ambient logo-lattice watermark added in pass 2 was bleeding past its section edge and causing page-wide horizontal overflow (confirmed via `document.documentElement.scrollWidth` exceeding viewport width) — added `overflow-x: clip` on the story/cinema sections plus a defensive `overflow-x: hidden` on `<html>`. Verified fixed at both 1280px and 375px.
+
+Verified: full-view opens from both entry points with correct high-res image and caption, footer renders as one clean centered column, zero horizontal overflow at desktop and mobile widths, zero console errors.
