@@ -103,3 +103,30 @@ progress 0.5 → scale 1.07 of 1→1.14 range), menu divider draw scrubs exactly
 progress 0.5 → `scaleX(0.5)` precisely), gap-glow renders with zero layout overlap/overflow and
 responds to pointer with glow+ripple, zero console errors, zero horizontal overflow at 375px and
 1280px, in Arabic/RTL and English/LTR.
+
+## Pass 7 — 2026-07-09 (user-directed: shining type, deeper scroll motion, more living space)
+
+- **Shining typography**: all five homepage section headings now wear the gold metallic gradient
+  with the travelling sheen (previously hero/menu titles only), plus a soft luminous
+  `drop-shadow` halo on every `.gold-text` element — metal near firelight. Cream headings gained
+  a faint gold ambient glow; secondary text (`--taupe`) brightened `#A99A88 → #B4A695` for
+  contrast (≈ 7.9:1 on charcoal).
+- **Deeper scroll choreography**: the hero title block now drifts up and dissolves as you scroll
+  away (a cinematic scene handoff, not static text scrolling off); the story image unveils
+  bottom-to-top with a scrubbed clip-path wipe. Desktop via GSAP scrub; mobile via native CSS
+  scroll-timelines, same split as pass 6.
+- **More living empty space**: the Story and Reserve sections' empty top-padding bands now carry
+  drifting ember sparks + the touch glow/ripple (Reserve also gets the lattice watermark; Story
+  skips it — `.no-mark` — since it already has its side watermark on desktop).
+- **Production bug found by finally being able to emulate a touch device in the preview**: CSS
+  `animation-timeline: scroll()` (no argument) binds to the *nearest scroll container* — and
+  `body { overflow-x: hidden }` silently made `<body>` one, whose scroll offset never changes, so
+  the hero-exit animation froze at frame 0. Fixed with explicit `scroll(root)` AND removing the
+  body-level `overflow-x` (html-level + per-section `overflow-x: clip` already prevent horizontal
+  scroll). `view()` timelines were empirically unaffected in Chromium but the body fix protects
+  them across engines too.
+
+Verified on a touch-emulating session (pointer: coarse, animation-timeline supported): hero
+opacity scrubs 1 → 0.43 at 450px scroll on the compositor with zero JS; menu divider draws to
+`scaleX(0.49)` at mid-viewport; story/reserve gap bands respond to pointerdown with glow + ripple;
+5 gold headings render with sheen; zero console errors; zero horizontal overflow.

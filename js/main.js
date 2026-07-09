@@ -379,6 +379,12 @@
         scale: 1.08, ease: "none",
         scrollTrigger: { trigger: ".hero", start: "top top", end: "bottom top", scrub: true }
       });
+      /* and the title block drifts up and dissolves — a clean cinematic handoff
+         to the next scene instead of being scrolled off like static text */
+      gsap.to(".hero-content", {
+        opacity: 0, y: -70, ease: "none",
+        scrollTrigger: { trigger: ".hero", start: "top top", end: "78% top", scrub: true }
+      });
     }
 
     /* fire strip: slow zoom for the whole time the quote is on screen */
@@ -414,6 +420,14 @@
       gsap.fromTo(el, { scaleX: 0 }, {
         scaleX: 1, ease: "none",
         scrollTrigger: { trigger: el, start: "top 85%", end: "top 55%", scrub: true }
+      });
+    });
+    root.querySelectorAll("[data-wipe] img").forEach(function (el) {
+      if (el._wipeBound) return;
+      el._wipeBound = true;
+      gsap.fromTo(el, { clipPath: "inset(100% 0% 0% 0%)" }, {
+        clipPath: "inset(0% 0% 0% 0%)", ease: "none",
+        scrollTrigger: { trigger: el.parentElement, start: "top 92%", end: "top 48%", scrub: true }
       });
     });
     if (window.ScrollTrigger) ScrollTrigger.refresh();

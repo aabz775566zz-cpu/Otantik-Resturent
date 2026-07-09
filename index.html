@@ -10,7 +10,7 @@
 <meta property="og:image" content="assets/img/poster-hero-grill.jpg">
 <link rel="icon" type="image/png" href="assets/img/logo-mark.png">
 <link rel="stylesheet" href="css/fonts.css">
-<link rel="stylesheet" href="css/main.css?v=6">
+<link rel="stylesheet" href="css/main.css?v=9">
 </head>
 <body data-page="home">
 
@@ -99,7 +99,7 @@
   </div>
   <div class="wrap">
     <p class="eyebrow rv" data-i18n="sig.eyebrow"></p>
-    <h2 class="h2 rv" data-i18n="sig.title"></h2>
+    <h2 class="h2 rv gold-text" data-i18n="sig.title"></h2>
     <div class="sig-rows" id="sig-rows"><!-- rendered by JS from menu data --></div>
   </div>
 </section>
@@ -120,13 +120,20 @@
 
 <!-- ================= STORY ================= -->
 <section class="section" id="story">
+  <div class="gap-glow glow no-mark" aria-hidden="true">
+    <span class="gap-spark" style="left:12%;animation-delay:1.1s"></span>
+    <span class="gap-spark" style="left:31%;animation-delay:3.9s"></span>
+    <span class="gap-spark" style="left:55%;animation-delay:0.2s"></span>
+    <span class="gap-spark" style="left:74%;animation-delay:2.8s"></span>
+    <span class="gap-spark" style="left:90%;animation-delay:5.3s"></span>
+  </div>
   <div class="wrap story-grid">
-    <div class="story-media rv glow">
+    <div class="story-media rv glow" data-wipe>
       <img src="assets/img/poster-mezze.jpg" alt="Levantine mezze table" loading="lazy">
     </div>
     <div class="story-body">
       <p class="eyebrow rv" data-i18n="story.eyebrow"></p>
-      <h2 class="h2 rv" data-i18n="story.title"></h2>
+      <h2 class="h2 rv gold-text" data-i18n="story.title"></h2>
       <p class="lead rv" data-rv-delay="0.15" data-i18n="story.body"></p>
       <div class="story-facts rv" data-rv-delay="0.3">
         <div class="fact"><div class="f-num" data-i18n="story.f1n"></div><div class="f-label" data-i18n="story.f1l"></div></div>
@@ -141,7 +148,7 @@
 <section class="section" id="categories" style="padding-top:0">
   <div class="wrap">
     <p class="eyebrow rv" data-i18n="cats.eyebrow"></p>
-    <h2 class="h2 rv" data-i18n="cats.title"></h2>
+    <h2 class="h2 rv gold-text" data-i18n="cats.title"></h2>
     <div class="cat-grid" id="cat-grid"><!-- rendered by JS --></div>
     <div class="menu-cta-row rv"><a class="btn btn-solid" href="menu.html" data-i18n="cta.fullmenu"></a></div>
   </div>
@@ -151,7 +158,7 @@
 <section class="section cinema" id="cinema">
   <div class="wrap">
     <p class="eyebrow rv" data-i18n="cinema.eyebrow"></p>
-    <h2 class="h2 rv" data-i18n="cinema.title"></h2>
+    <h2 class="h2 rv gold-text" data-i18n="cinema.title"></h2>
     <div class="cinema-grid">
       <figure class="clip glow rv">
         <video autoplay muted loop playsinline preload="metadata" poster="assets/img/poster-hero-grill.jpg">
@@ -187,10 +194,18 @@
 
 <!-- ================= RESERVE ================= -->
 <section class="section reserve" id="reserve">
+  <div class="gap-glow glow" aria-hidden="true">
+    <div class="gap-glow-mark"></div>
+    <span class="gap-spark" style="left:10%;animation-delay:2.4s"></span>
+    <span class="gap-spark" style="left:28%;animation-delay:0.6s"></span>
+    <span class="gap-spark" style="left:47%;animation-delay:4.4s"></span>
+    <span class="gap-spark" style="left:68%;animation-delay:1.5s"></span>
+    <span class="gap-spark" style="left:86%;animation-delay:3.2s"></span>
+  </div>
   <div class="wrap reserve-grid">
     <div class="reserve-info">
       <p class="eyebrow rv" data-i18n="res.eyebrow"></p>
-      <h2 class="h2 rv" data-i18n="res.title"></h2>
+      <h2 class="h2 rv gold-text" data-i18n="res.title"></h2>
       <p class="lead rv" data-i18n="res.sub"></p>
       <div class="contact-lines rv">
         <div class="c-line"><span class="ico">✆</span><a href="tel:+8617137666662" dir="ltr">+86 171 3766 6662</a></div>
@@ -274,7 +289,7 @@
 <script src="js/vendor/ScrollTrigger.min.js"></script>
 <script src="js/vendor/lenis.min.js"></script>
 <script src="js/menu-data.js"></script>
-<script src="js/main.js?v=6"></script>
+<script src="js/main.js?v=8"></script>
 <script>
 /* home-only rendering: signatures, category cards, marquee (localized) */
 (function () {

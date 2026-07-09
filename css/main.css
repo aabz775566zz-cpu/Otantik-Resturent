@@ -26,7 +26,7 @@
   --gold-bright: #E8C284;
   --ember: #D96C2C;
   --cream: #F2E9DC;
-  --taupe: #A99A88;
+  --taupe: #B4A695;
   --line: rgba(200, 155, 90, 0.3);
   --line-soft: rgba(200, 155, 90, 0.16);
   --shadow: 0 24px 60px rgba(0, 0, 0, 0.55);
@@ -63,7 +63,9 @@ body {
   font-size: 16.5px;
   line-height: 1.75;
   -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
+  /* no overflow-x here: it would make body a scroll container, which breaks
+     scroll()/view() animation timelines (they'd bind to body, which never
+     scrolls). html-level overflow-x + per-section overflow-x:clip suffice. */
 }
 
 img, video { display: block; max-width: 100%; }
@@ -228,7 +230,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 400; line-height: 1.
 html[lang="ar"] h1, html[lang="ar"] h2, html[lang="ar"] h3 { font-weight: 600; line-height: 1.4; }
 .dish-name, .lb-name, .sig-body h3 { font-family: var(--font-dish); font-weight: 600; }
 html[lang="ar"] .dish-name, html[lang="ar"] .lb-name, html[lang="ar"] .sig-body h3 { font-weight: 700; }
-.h2 { font-size: clamp(2.1rem, 4.6vw, 3.5rem); color: var(--cream); }
+.h2 { font-size: clamp(2.1rem, 4.6vw, 3.5rem); color: var(--cream); text-shadow: 0 0 30px rgba(232, 194, 132, 0.12); }
 .lead { color: var(--taupe); max-width: 60ch; margin-top: 18px; font-size: 1.05rem; }
 
 .gold-text {
@@ -236,6 +238,7 @@ html[lang="ar"] .dish-name, html[lang="ar"] .lb-name, html[lang="ar"] .sig-body 
   background-size: 220% 100%;
   -webkit-background-clip: text; background-clip: text; color: transparent;
   animation: sheen 9s ease-in-out infinite;
+  filter: drop-shadow(0 0 16px rgba(232, 194, 132, 0.22)); /* luminous halo — metal near firelight */
 }
 @keyframes sheen { 0%, 100% { background-position: 0% 0; } 50% { background-position: 100% 0; } }
 @media (prefers-reduced-motion: reduce) { .gold-text { animation: none; } }
@@ -673,6 +676,29 @@ html[lang="ar"] .lb-cat { letter-spacing: 0.1em; }
       from { transform: scaleX(0); }
       to   { transform: scaleX(1); }
     }
+    /* hero content drifts up and dissolves as the page scrolls away from it.
+       scroll(root) explicitly: plain scroll() resolves to the *nearest* scroll
+       container, and body{overflow-x:hidden} makes body one — whose scroll
+       offset never moves, silently freezing the animation at frame 0 */
+    .hero-content {
+      animation: heroExitMobile linear both;
+      animation-timeline: scroll(root);
+      animation-range: 0 92svh;
+    }
+    @keyframes heroExitMobile {
+      from { opacity: 1; transform: translateY(0); }
+      to   { opacity: 0; transform: translateY(-56px); }
+    }
+    /* story image unveils bottom-to-top as it enters */
+    [data-wipe] img {
+      animation: wipeRevealMobile linear both;
+      animation-timeline: view();
+      animation-range: entry 0% cover 45%;
+    }
+    @keyframes wipeRevealMobile {
+      from { clip-path: inset(100% 0 0 0); }
+      to   { clip-path: inset(0 0 0 0); }
+    }
   }
 }
 
@@ -685,6 +711,7 @@ html[lang="ar"] .lb-cat { letter-spacing: 0.1em; }
   height: clamp(80px, 11vw, 150px); overflow: hidden; pointer-events: auto;
 }
 @media (max-width: 640px) { .gap-glow { height: 64px; } }
+.gap-glow.no-mark .gap-glow-mark { display: none; }
 .gap-glow-mark {
   position: absolute; top: 50%; inset-inline-start: 50%;
   transform: translate(-50%, -50%);
