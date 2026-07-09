@@ -45,3 +45,12 @@ User feedback: site looked dull/flat, no way to see a dish full-screen, footer w
 - **Real bug found and fixed during verification**: the ambient logo-lattice watermark added in pass 2 was bleeding past its section edge and causing page-wide horizontal overflow (confirmed via `document.documentElement.scrollWidth` exceeding viewport width) — added `overflow-x: clip` on the story/cinema sections plus a defensive `overflow-x: hidden` on `<html>`. Verified fixed at both 1280px and 375px.
 
 Verified: full-view opens from both entry points with correct high-res image and caption, footer renders as one clean centered column, zero horizontal overflow at desktop and mobile widths, zero console errors.
+
+## Pass 5 — 2026-07-09 (user-directed)
+User feedback: the three-pill language switcher (عربي / EN / 中文) looked bad.
+
+- Replaced with a single circular globe-icon button. Click opens a small elegant dropdown (right-aligned under the icon, RTL-aware) listing all three languages with the active one marked by a gold dot; selecting one applies it and closes the panel; clicking outside or Esc also closes it. Gold gradient + slight rotation on the open state.
+- Frees real header space on mobile — one icon next to the burger menu instead of three cramped text pills.
+- Verification caught a recurring gotcha this session: the preview browser was serving stale cached `main.css`/`main.js` after edits, making a real fix look broken. Added `?v=4` cache-busting query params to the CSS/JS `<link>`/`<script>` tags so this stops costing verification time — bump the version string on future edits if the same symptom reappears.
+
+Verified: icon renders and opens/closes correctly, language selection updates content + direction (AR/RTL ↔ EN,ZH/LTR) and closes the panel, outside-click dismiss works, fits without overflow at 375px and 1280px, zero console errors.

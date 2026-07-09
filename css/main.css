@@ -132,14 +132,42 @@ body::before { /* warm ambient light so the dark stage never feels dead */
 
 .header-actions { display: flex; align-items: center; gap: 16px; }
 
-.lang-switch { display: flex; align-items: center; gap: 2px; border: 1px solid var(--line); border-radius: 3px; padding: 2px; }
-.lang-switch button {
-  padding: 4px 10px; font-size: 0.8rem; letter-spacing: 0.03em;
-  color: var(--taupe); border-radius: 2px;
-  transition: color 0.3s, background 0.3s;
+/* ============================================================
+   LANGUAGE SWITCH — one icon, an elegant dropdown
+   ============================================================ */
+.lang-menu { position: relative; }
+.lang-btn {
+  width: 42px; height: 42px; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  border: 1px solid var(--line); border-radius: 50%;
+  color: var(--taupe); transition: color 0.35s var(--ease), background 0.35s var(--ease), border-color 0.35s var(--ease), transform 0.35s var(--ease);
 }
-.lang-switch button.on { color: var(--bg); background: var(--gold); }
-.lang-switch button:not(.on):hover { color: var(--cream); }
+.lang-btn svg { width: 20px; height: 20px; stroke: currentColor; }
+.lang-btn:hover { color: var(--gold-bright); border-color: var(--gold); }
+.lang-btn.open {
+  color: #14100B; border-color: var(--gold-bright);
+  background: linear-gradient(180deg, var(--gold-bright), var(--gold));
+  transform: rotate(-8deg);
+}
+
+.lang-panel {
+  position: absolute; top: calc(100% + 12px); inset-inline-end: 0; z-index: 80;
+  min-width: 148px; background: var(--bg2); border: 1px solid var(--line-soft);
+  border-radius: 10px; padding: 6px; box-shadow: 0 20px 48px rgba(0, 0, 0, 0.55);
+  opacity: 0; visibility: hidden; transform: translateY(-8px) scale(0.96); transform-origin: top;
+  transition: opacity 0.28s var(--ease), transform 0.28s var(--ease), visibility 0.28s;
+}
+.lang-panel.open { opacity: 1; visibility: visible; transform: translateY(0) scale(1); }
+.lang-opt {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  width: 100%; padding: 11px 13px; border-radius: 6px;
+  font-size: 0.95rem; color: var(--taupe);
+  transition: background 0.25s var(--ease), color 0.25s var(--ease);
+}
+.lang-opt:hover { background: rgba(200, 155, 90, 0.12); color: var(--cream); }
+.lang-opt.on { color: var(--gold-bright); }
+.lang-opt .dot { width: 5px; height: 5px; border-radius: 50%; background: var(--gold-bright); opacity: 0; transition: opacity 0.25s; }
+.lang-opt.on .dot { opacity: 1; }
 
 .btn {
   display: inline-flex; align-items: center; justify-content: center; gap: 10px;

@@ -10,7 +10,7 @@
 <meta property="og:image" content="assets/img/poster-hero-grill.jpg">
 <link rel="icon" type="image/png" href="assets/img/logo-mark.png">
 <link rel="stylesheet" href="css/fonts.css">
-<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/main.css?v=4">
 </head>
 <body data-page="home">
 
@@ -30,10 +30,19 @@
       <a href="#contact" data-i18n="nav.contact"></a>
     </nav>
     <div class="header-actions">
-      <div class="lang-switch" role="group" aria-label="Language">
-        <button data-lang="ar">عربي</button>
-        <button data-lang="en">EN</button>
-        <button data-lang="zh">中文</button>
+      <div class="lang-menu">
+        <button class="lang-btn" id="lang-btn" aria-haspopup="menu" aria-expanded="false" aria-label="Change language">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="9"/>
+            <path d="M3 12h18"/>
+            <path d="M12 3c2.4 2.5 3.7 5.7 3.7 9s-1.3 6.5-3.7 9c-2.4-2.5-3.7-5.7-3.7-9s1.3-6.5 3.7-9z"/>
+          </svg>
+        </button>
+        <div class="lang-panel" id="lang-panel" role="menu" aria-label="Language">
+          <button class="lang-opt" data-lang="ar" role="menuitem">عربي<span class="dot"></span></button>
+          <button class="lang-opt" data-lang="en" role="menuitem">English<span class="dot"></span></button>
+          <button class="lang-opt" data-lang="zh" role="menuitem">中文<span class="dot"></span></button>
+        </div>
       </div>
       <a class="btn btn-ghost btn-sm" href="#reserve" data-i18n="cta.reserve"></a>
       <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
@@ -256,7 +265,7 @@
 <script src="js/vendor/ScrollTrigger.min.js"></script>
 <script src="js/vendor/lenis.min.js"></script>
 <script src="js/menu-data.js"></script>
-<script src="js/main.js"></script>
+<script src="js/main.js?v=4"></script>
 <script>
 /* home-only rendering: signatures, category cards, marquee (localized) */
 (function () {

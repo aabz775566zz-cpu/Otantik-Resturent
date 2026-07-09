@@ -233,9 +233,11 @@
     document.querySelectorAll("[data-i18n-aria]").forEach(function (el) {
       el.setAttribute("aria-label", t(el.getAttribute("data-i18n-aria")));
     });
-    document.querySelectorAll(".lang-switch button").forEach(function (b) {
+    document.querySelectorAll(".lang-opt").forEach(function (b) {
       b.classList.toggle("on", b.getAttribute("data-lang") === lang);
     });
+    var langBtn = document.getElementById("lang-btn");
+    if (langBtn) langBtn.setAttribute("aria-label", "Language: " + lang.toUpperCase());
     /* lang switch replaces the split word spans with plain text —
        the gradient must live on the h1 again */
     var heroTitle = document.querySelector(".hero-title");
@@ -249,12 +251,35 @@
 
   window.OTANTIK_I18N = { t: t, get lang() { return lang; } };
 
+  function closeLangPanel() {
+    var panel = document.getElementById("lang-panel");
+    var btn = document.getElementById("lang-btn");
+    if (panel) panel.classList.remove("open");
+    if (btn) { btn.classList.remove("open"); btn.setAttribute("aria-expanded", "false"); }
+  }
+
   document.addEventListener("click", function (e) {
-    var b = e.target.closest(".lang-switch button");
-    if (!b) return;
-    lang = b.getAttribute("data-lang");
-    try { localStorage.setItem("otantik-lang", lang); } catch (err) {}
-    applyLang();
+    var opt = e.target.closest(".lang-opt");
+    if (opt) {
+      lang = opt.getAttribute("data-lang");
+      try { localStorage.setItem("otantik-lang", lang); } catch (err) {}
+      applyLang();
+      closeLangPanel();
+      return;
+    }
+    var btn = e.target.closest("#lang-btn");
+    if (btn) {
+      var panel = document.getElementById("lang-panel");
+      var willOpen = !panel.classList.contains("open");
+      panel.classList.toggle("open", willOpen);
+      btn.classList.toggle("open", willOpen);
+      btn.setAttribute("aria-expanded", willOpen ? "true" : "false");
+      return;
+    }
+    if (!e.target.closest(".lang-panel")) closeLangPanel();
+  });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") closeLangPanel();
   });
 
   /* ---------------- header, burger, progress ---------------- */
