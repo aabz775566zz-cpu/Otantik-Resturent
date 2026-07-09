@@ -52,7 +52,7 @@
         '<div class="wrap">' +
           '<div class="ms-head"><h2>' + c.name[L] + '</h2><span class="ms-count">' + items.length + "</span></div>" +
           '<p class="ms-line">' + c.line[L] + "</p>" +
-          '<div class="ms-rule"></div>' +
+          '<div class="ms-rule" data-draw></div>' +
           '<div class="dish-list">' + rows + "</div>" +
         "</div>" +
       "</section>";
@@ -60,6 +60,7 @@
 
     initSpy();
     applyFilter();
+    if (window.OTANTIK_BIND_MOTION) window.OTANTIK_BIND_MOTION(body);
   }
 
   /* ---------------- rail scroll-spy + click ---------------- */
@@ -76,7 +77,14 @@
         var chip = chips[id];
         if (chip) {
           chip.classList.add("on");
-          chip.scrollIntoView({ block: "nearest", inline: "center", behavior: "smooth" });
+          /* scroll only the horizontal chip rail — scrollIntoView's "nearest" block
+             axis can drag the page's own vertical scroll when the rail is sticky,
+             fighting Lenis and any programmatic scroll on every category change */
+          var railInner = chip.closest(".rail-inner");
+          if (railInner) {
+            var target = chip.offsetLeft - (railInner.clientWidth - chip.offsetWidth) / 2;
+            railInner.scrollTo({ left: target, behavior: "smooth" });
+          }
         }
       });
     }, { rootMargin: "-25% 0px -65% 0px" });
@@ -189,10 +197,16 @@
     if (dy > 80) { sheetY = null; closeLB(); }
   }, { passive: true });
 
-  /* ---------------- boot + deep link + lang rerender ---------------- */
-  document.addEventListener("otantik:lang", render);
+  /* ---------------- boot + deep link + lang rerender ----------------
+     main.js's own DOMContentLoaded handler calls applyLang(), which
+     dispatches "otantik:lang" as part of the very first page load —
+     the listener below is attached only after our own initial render()
+     runs, so that first dispatch (which fires before this callback even
+     starts, since main.js's listener is registered first) never causes
+     a redundant double-render with duplicate ScrollTrigger instances. */
   document.addEventListener("DOMContentLoaded", function () {
     render();
+    document.addEventListener("otantik:lang", render);
     var slug = location.hash.replace("#", "");
     if (slug) {
       var target = null;

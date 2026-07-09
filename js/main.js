@@ -367,19 +367,58 @@
         });
     });
 
-    /* scroll-scrubbed transforms are the #1 cause of mobile scroll jank — desktop only */
-    if (!isTouch) {
-      document.querySelectorAll("[data-parallax]").forEach(function (el) {
-        var amt = parseFloat(el.getAttribute("data-parallax")) || 8;
-        gsap.fromTo(el, { yPercent: -amt }, {
-          yPercent: amt, ease: "none",
-          scrollTrigger: { trigger: el.parentElement, start: "top bottom", end: "bottom top", scrub: true }
-        });
+    /* scroll-scrubbed transforms are the #1 cause of mobile scroll jank — desktop only.
+       Touch devices get the CSS animation-timeline equivalents in main.css instead,
+       which run on the compositor and never touch JS scroll handling. */
+    bindScrollMotion(document);
+
+    /* hero: slow push-in as the viewer scrolls past, like leaning toward the fire */
+    var heroVideo = document.querySelector(".hero-media video");
+    if (heroVideo && !isTouch) {
+      gsap.fromTo(heroVideo, { scale: 1 }, {
+        scale: 1.08, ease: "none",
+        scrollTrigger: { trigger: ".hero", start: "top top", end: "bottom top", scrub: true }
+      });
+    }
+
+    /* fire strip: slow zoom for the whole time the quote is on screen */
+    var fireVideo = document.querySelector(".fire-strip video");
+    if (fireVideo && !isTouch) {
+      gsap.fromTo(fireVideo, { scale: 1 }, {
+        scale: 1.14, ease: "none",
+        scrollTrigger: { trigger: ".fire-strip", start: "top bottom", end: "bottom top", scrub: true }
       });
     }
 
     ScrollTrigger.refresh();
   }
+
+  /* ---------------- scroll-driven motion: shared binder for static + dynamic content ----------------
+     desktop only — isTouch skips this entirely, mobile uses CSS animation-timeline (see main.css).
+     Safe to call repeatedly on the same root; already-bound elements are skipped. */
+  function bindScrollMotion(root) {
+    if (reduced || !window.gsap || isTouch) return;
+    root = root || document;
+    root.querySelectorAll("[data-parallax]").forEach(function (el) {
+      if (el._parallaxBound) return;
+      el._parallaxBound = true;
+      var amt = parseFloat(el.getAttribute("data-parallax")) || 8;
+      gsap.fromTo(el, { yPercent: -amt }, {
+        yPercent: amt, ease: "none",
+        scrollTrigger: { trigger: el.parentElement, start: "top bottom", end: "bottom top", scrub: true }
+      });
+    });
+    root.querySelectorAll("[data-draw]").forEach(function (el) {
+      if (el._drawBound) return;
+      el._drawBound = true;
+      gsap.fromTo(el, { scaleX: 0 }, {
+        scaleX: 1, ease: "none",
+        scrollTrigger: { trigger: el, start: "top 85%", end: "top 55%", scrub: true }
+      });
+    });
+    if (window.ScrollTrigger) ScrollTrigger.refresh();
+  }
+  window.OTANTIK_BIND_MOTION = bindScrollMotion;
 
   /* ---------------- hero embers ---------------- */
   function initEmbers() {

@@ -10,7 +10,7 @@
 <meta property="og:image" content="assets/img/poster-hero-grill.jpg">
 <link rel="icon" type="image/png" href="assets/img/logo-mark.png">
 <link rel="stylesheet" href="css/fonts.css">
-<link rel="stylesheet" href="css/main.css?v=4">
+<link rel="stylesheet" href="css/main.css?v=6">
 </head>
 <body data-page="home">
 
@@ -88,6 +88,15 @@
 
 <!-- ================= SIGNATURES ================= -->
 <section class="section" id="signatures">
+  <div class="gap-glow glow" aria-hidden="true">
+    <div class="gap-glow-mark"></div>
+    <span class="gap-spark" style="left:8%;animation-delay:0s"></span>
+    <span class="gap-spark" style="left:23%;animation-delay:1.8s"></span>
+    <span class="gap-spark" style="left:40%;animation-delay:3.4s"></span>
+    <span class="gap-spark" style="left:59%;animation-delay:0.9s"></span>
+    <span class="gap-spark" style="left:77%;animation-delay:2.6s"></span>
+    <span class="gap-spark" style="left:92%;animation-delay:4.2s"></span>
+  </div>
   <div class="wrap">
     <p class="eyebrow rv" data-i18n="sig.eyebrow"></p>
     <h2 class="h2 rv" data-i18n="sig.title"></h2>
@@ -265,7 +274,7 @@
 <script src="js/vendor/ScrollTrigger.min.js"></script>
 <script src="js/vendor/lenis.min.js"></script>
 <script src="js/menu-data.js"></script>
-<script src="js/main.js?v=4"></script>
+<script src="js/main.js?v=6"></script>
 <script>
 /* home-only rendering: signatures, category cards, marquee (localized) */
 (function () {
@@ -290,7 +299,7 @@
         var it = MENU.items.filter(function (x) { return x.slug === slug; })[0];
         if (!it) return "";
         return '<div class="sig-row">' +
-          '<span class="sig-ghost" aria-hidden="true">0' + (i + 1) + '</span>' +
+          '<span class="sig-ghost" aria-hidden="true" data-parallax="16">0' + (i + 1) + '</span>' +
           '<div class="sig-media rv glow"><img src="' + it.img + '" alt="' + it.name[L] + '" loading="lazy" data-fv-cap="' + it.name[L] + '  ·  ¥' + it.price + '"></div>' +
           '<div class="sig-body">' +
             '<div class="num rv">0' + (i + 1) + '</div>' +
@@ -340,6 +349,7 @@
         el.style.opacity = 1; el.style.transform = "none";
       });
     }
+    if (window.OTANTIK_BIND_MOTION) window.OTANTIK_BIND_MOTION(document.getElementById("sig-rows"));
   }
 
   document.addEventListener("otantik:lang", renderHome);

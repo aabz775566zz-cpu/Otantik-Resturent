@@ -7,9 +7,9 @@ CSS_URL = ("https://fonts.googleapis.com/css2?"
            "family=Amiri:ital,wght@0,400;0,700;1,400"
            "&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500"
            "&family=IBM+Plex+Sans+Arabic:wght@400;500;600"
-           "&family=Inter:wght@400;500;600"
            "&family=Marcellus"
            "&family=Reem+Kufi:wght@400;500;600;700&display=swap")
+# Geist (Latin body font) is self-hosted separately, not fetched from Google Fonts — see main.css @font-face
 UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36"
 
 req = urllib.request.Request(CSS_URL, headers={"User-Agent": UA})

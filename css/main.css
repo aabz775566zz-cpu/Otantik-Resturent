@@ -249,7 +249,7 @@ html[lang="ar"] .dish-name, html[lang="ar"] .lb-name, html[lang="ar"] .sig-body 
    ============================================================ */
 .hero { position: relative; height: 100svh; min-height: 620px; display: flex; align-items: flex-end; overflow: hidden; }
 .hero-media { position: absolute; inset: 0; }
-.hero-media video, .hero-media img { width: 100%; height: 100%; object-fit: cover; filter: saturate(1.18) brightness(1.06) contrast(1.03); }
+.hero-media video, .hero-media img { width: 100%; height: 100%; object-fit: cover; filter: saturate(1.18) brightness(1.06) contrast(1.03); transform-origin: center; will-change: transform; }
 .hero-scrim {
   position: absolute; inset: 0;
   background:
@@ -269,18 +269,18 @@ html[lang="ar"] .dish-name, html[lang="ar"] .lb-name, html[lang="ar"] .sig-body 
 .hero-content { position: relative; z-index: 2; padding-bottom: clamp(70px, 11vh, 130px); }
 .hero-kicker {
   font-size: 0.8rem; letter-spacing: 0.4em; text-transform: uppercase; color: var(--gold-bright);
-  margin-bottom: 20px; text-shadow: 0 2px 18px rgba(0,0,0,0.6);
+  margin-bottom: 20px; text-shadow: 0 1px 2px rgba(0,0,0,0.85), 0 2px 18px rgba(0,0,0,0.6);
 }
 html[lang="ar"] .hero-kicker { letter-spacing: 0.14em; }
 .hero-title {
   font-size: clamp(3.2rem, 9.5vw, 7.2rem);
-  text-shadow: 0 4px 40px rgba(0, 0, 0, 0.55);
+  text-shadow: 0 1px 3px rgba(0,0,0,0.9), 0 4px 40px rgba(0, 0, 0, 0.55);
   max-width: 14ch;
 }
 .hero-sub {
   margin-top: 22px; max-width: 52ch; color: rgba(242, 233, 220, 0.86);
   font-size: clamp(1rem, 1.4vw, 1.18rem);
-  text-shadow: 0 2px 14px rgba(0,0,0,0.65);
+  text-shadow: 0 1px 2px rgba(0,0,0,0.9), 0 2px 14px rgba(0,0,0,0.65);
 }
 .hero-ctas { display: flex; gap: 16px; margin-top: 38px; flex-wrap: wrap; }
 
@@ -344,12 +344,12 @@ html[dir="rtl"] .marquee-track { animation-name: marq-rtl; }
    ============================================================ */
 .fire-strip { position: relative; min-height: 78vh; display: flex; align-items: center; overflow: hidden; }
 .fire-strip .fire-media { position: absolute; inset: -12% 0; }
-.fire-strip video, .fire-strip img { width: 100%; height: 100%; object-fit: cover; filter: saturate(1.15) brightness(1.05); }
+.fire-strip video, .fire-strip img { width: 100%; height: 100%; object-fit: cover; filter: saturate(1.15) brightness(1.05); transform-origin: center; will-change: transform; }
 .fire-strip .scrim { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(14,12,10,0.85), rgba(14,12,10,0.3) 45%, rgba(14,12,10,0.88)); }
 .fire-quote { position: relative; z-index: 2; text-align: center; margin-inline: auto; max-width: 900px; padding-inline: 24px; }
 .fire-quote blockquote {
   font-family: var(--font-display); font-size: clamp(1.7rem, 4vw, 3.1rem); line-height: 1.5;
-  text-shadow: 0 3px 30px rgba(0,0,0,0.7);
+  text-shadow: 0 1px 3px rgba(0,0,0,0.9), 0 3px 30px rgba(0,0,0,0.7);
 }
 .fire-quote .who { margin-top: 22px; font-size: 0.82rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold-bright); }
 html[lang="ar"] .fire-quote .who { letter-spacing: 0.1em; }
@@ -388,7 +388,7 @@ html[lang="ar"] .fire-quote .who { letter-spacing: 0.1em; }
 .cat-card:hover img { transform: scale(1.12); filter: saturate(1.22) brightness(1.08); }
 .cat-card .veil { position: absolute; inset: 0; background: linear-gradient(180deg, transparent 30%, rgba(14,12,10,0.9)); }
 .cat-card .cc-label { position: absolute; inset-inline: 0; bottom: 0; padding: 22px; display: flex; align-items: baseline; justify-content: space-between; gap: 10px; }
-.cat-card .cc-name { font-family: var(--font-display); font-size: 1.45rem; text-shadow: 0 2px 12px rgba(0,0,0,0.8); }
+.cat-card .cc-name { font-family: var(--font-display); font-size: 1.45rem; text-shadow: 0 1px 2px rgba(0,0,0,0.9), 0 2px 12px rgba(0,0,0,0.8); }
 .cat-card .cc-count { font-size: 0.8rem; color: var(--gold-bright); letter-spacing: 0.08em; font-variant-numeric: tabular-nums; }
 .cat-card::after { content: ""; position: absolute; inset: 0; box-shadow: inset 0 0 0 1px var(--line-soft); transition: box-shadow 0.5s; }
 .cat-card:hover::after { box-shadow: inset 0 0 0 1px rgba(200,155,90,0.45); }
@@ -407,7 +407,7 @@ html[lang="ar"] .fire-quote .who { letter-spacing: 0.1em; }
 .clip .clip-label {
   position: absolute; inset-inline-start: 0; bottom: 0; z-index: 2;
   padding: 18px 22px; font-family: var(--font-display); font-size: 1.2rem;
-  text-shadow: 0 2px 14px rgba(0,0,0,0.85);
+  text-shadow: 0 1px 2px rgba(0,0,0,0.9), 0 2px 14px rgba(0,0,0,0.85);
 }
 .clip .veil { position: absolute; inset: 0; background: linear-gradient(180deg, transparent 55%, rgba(10,8,6,0.85)); }
 .clip::after { content: ""; position: absolute; inset: 0; box-shadow: inset 0 0 0 1px var(--line-soft); transition: box-shadow 0.5s; }
@@ -545,6 +545,9 @@ html[dir="rtl"] .ms-rule { background: linear-gradient(-90deg, var(--gold), tran
   transform: translateY(-50%); color: var(--gold); font-size: 9px; line-height: 1;
   background: var(--bg); padding-inline-end: 9px;
 }
+/* desktop: GSAP scrubs scaleX 0→1 as the category enters view (see bindScrollMotion) */
+.ms-rule[data-draw] { transform-origin: 0% 50%; }
+html[dir="rtl"] .ms-rule[data-draw] { transform-origin: 100% 50%; }
 
 .dish-list { display: grid; grid-template-columns: 1fr 1fr; column-gap: clamp(36px, 5vw, 72px); }
 .dish {
@@ -638,6 +641,71 @@ html[lang="ar"] .lb-cat { letter-spacing: 0.1em; }
 .brand img.word { height: 38px; width: auto; }
 .f-brand .lockup { height: 130px; width: auto; margin-bottom: 20px; }
 .hero-mark { height: clamp(72px, 10vh, 110px); width: auto; margin-bottom: 26px; filter: drop-shadow(0 4px 24px rgba(0,0,0,0.6)); }
+
+/* ============================================================
+   NATIVE SCROLL-DRIVEN MOTION (phones) — CSS animation-timeline.
+   Runs entirely on the compositor thread: no JS scroll listener, no
+   Lenis, no ScrollTrigger scrub — the thing that made mobile scrolling
+   feel laggy before. This is the modern, scroll-jank-free way to tie
+   motion to scroll position. Feature-detected; unsupported browsers
+   just see the static end-state (already correct, see base rules
+   above), never a broken mid-animation frame. Skips elements that
+   already get a one-time GSAP reveal (.rv) to avoid two systems
+   fighting over the same transform.
+   ============================================================ */
+@supports (animation-timeline: view()) {
+  @media (pointer: coarse) and (prefers-reduced-motion: no-preference) {
+    .sig-media img {
+      animation: sigRevealMobile linear both;
+      animation-timeline: view();
+      animation-range: entry 0% cover 40%;
+    }
+    @keyframes sigRevealMobile {
+      from { transform: scale(1.14); filter: saturate(1.12) brightness(0.92); }
+      to   { transform: scale(1.06); filter: saturate(1.12) brightness(1.03); }
+    }
+    .ms-rule[data-draw] {
+      animation: ruleDrawMobile linear both;
+      animation-timeline: view();
+      animation-range: entry 0% cover 50%;
+    }
+    @keyframes ruleDrawMobile {
+      from { transform: scaleX(0); }
+      to   { transform: scaleX(1); }
+    }
+  }
+}
+
+/* ============================================================
+   AMBIENT GAP BAND — turns dead section padding into something
+   quiet but alive: faint brand lattice + touch glow + drifting sparks
+   ============================================================ */
+.gap-glow {
+  position: absolute; z-index: -1; inset-inline: 0; inset-block-start: 0;
+  height: clamp(80px, 11vw, 150px); overflow: hidden; pointer-events: auto;
+}
+@media (max-width: 640px) { .gap-glow { height: 64px; } }
+.gap-glow-mark {
+  position: absolute; top: 50%; inset-inline-start: 50%;
+  transform: translate(-50%, -50%);
+  height: 74%; width: auto; aspect-ratio: 446 / 900;
+  background: url("../assets/img/logo-mark.png") center / contain no-repeat;
+  opacity: 0.045; pointer-events: none;
+}
+.gap-spark {
+  position: absolute; bottom: -6px; width: 2px; height: 2px; border-radius: 50%;
+  background: var(--gold-bright); opacity: 0;
+  box-shadow: 0 0 6px 1px rgba(232, 194, 132, 0.6);
+  animation: gapDrift 7s ease-in infinite;
+  pointer-events: none;
+}
+@keyframes gapDrift {
+  0%   { transform: translateY(0) scale(0.7); opacity: 0; }
+  12%  { opacity: 0.55; }
+  85%  { opacity: 0.25; }
+  100% { transform: translateY(-90px) scale(1.1); opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) { .gap-spark { animation: none; display: none; } }
 
 /* ============================================================
    FULL-SCREEN DISH VIEWER

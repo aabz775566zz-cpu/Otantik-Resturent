@@ -54,3 +54,52 @@ User feedback: the three-pill language switcher (عربي / EN / 中文) looked 
 - Verification caught a recurring gotcha this session: the preview browser was serving stale cached `main.css`/`main.js` after edits, making a real fix look broken. Added `?v=4` cache-busting query params to the CSS/JS `<link>`/`<script>` tags so this stops costing verification time — bump the version string on future edits if the same symptom reappears.
 
 Verified: icon renders and opens/closes correctly, language selection updates content + direction (AR/RTL ↔ EN,ZH/LTR) and closes the panel, outside-click dismiss works, fits without overflow at 375px and 1280px, zero console errors.
+
+## Pass 6 — 2026-07-09 (user-directed: scroll-driven motion + font audit + ambient touch space)
+Implemented directly (not handed off to a separate model/session) so the same verification loop
+used all session could catch real bugs rather than trusting untested instructions.
+
+- **Font audit**: `--font-body` was already Geist end-to-end; removed ~20 dead unused `@font-face:
+  'Inter'` declarations from the auto-generated `css/fonts.css` (and `scripts/get_fonts.py`'s
+  Google Fonts request, so they don't come back on a regen) plus the orphaned Inter woff2 files —
+  pure payload cleanup, nothing was rendering with Inter. Strengthened text-shadow (added a tight
+  near-black contact shadow under the existing soft glow) on hero title/kicker/sub, fire-strip
+  quote, category-card labels, and cinema clip captions, to compensate for the brightness/
+  saturation boost from pass 4 — verified the base palette itself already passes WCAG AA/AAA
+  (taupe-on-charcoal ≈ 6.9:1, gold-bright-on-charcoal ≈ 11.2:1).
+- **True scroll-driven motion**: hero video now slow-zooms as you scroll past it; the fire-strip
+  video zooms continuously for the whole time its quote is on screen; signature-dish ghost
+  numerals drift on a deeper parallax; each menu category's gold divider line now draws itself
+  (scaleX 0→1, RTL-aware transform-origin) as it scrolls into view instead of appearing static.
+  Desktop uses GSAP ScrollTrigger `scrub` (via a new shared `bindScrollMotion()`/
+  `window.OTANTIK_BIND_MOTION()` helper safe to call repeatedly on dynamically-rendered content).
+  **Mobile deliberately does not get any of the above** — instead it gets the same visual result
+  through native CSS `animation-timeline: view()` (feature-detected via `@supports`, gated to
+  `pointer: coarse`), which runs on the compositor thread with zero JS scroll listeners. This was
+  a hard constraint from the prior mobile-scroll fix (no Lenis/scrub on touch) and is the reason
+  scroll-driven motion could be added at all without regressing that fix.
+- **Ambient touch-reactive gap band**: the flat, empty top-padding void on `#signatures` (the
+  exact area the user circled in a screenshot, between the marquee and "Signatures") now carries
+  the same faint mihrab-lattice watermark already used elsewhere, plus a handful of slow-drifting
+  ember sparks (pure CSS, respects reduced-motion), plus the site's existing `.glow`/ripple touch
+  mechanic reused as-is (not reinvented) — touching that empty band produces the identical warm
+  glow-follows-finger + ripple pulse as touching a dish photo.
+- **Two real bugs caught during verification, not assumed away:**
+  1. `menu.js` was rendering the 183-dish menu **twice** on every page load — `main.js`'s
+     `applyLang()` dispatches an `otantik:lang` event as part of the very first boot, which
+     `menu.js` also listened for, plus its own `DOMContentLoaded` handler called `render()`
+     again. Confirmed via `ScrollTrigger.getAll()` showing 28 bound triggers for 14 divider
+     lines. Fixed by attaching the `otantik:lang` listener only *after* the initial render.
+  2. The category rail's scroll-spy (`initSpy()` in `menu.js`) called
+     `chip.scrollIntoView({block:"nearest", inline:"center"})` to keep the active chip visible —
+     but because `.cat-rail` is `position: sticky`, the `block: "nearest"` axis was periodically
+     dragging the **page's own vertical scroll** back toward the rail, fighting Lenis and any
+     programmatic scroll. Confirmed by driving `OTANTIK_LENIS.scrollTo()` directly and watching
+     `scrollY` refuse to move past ~1250px on a 17,000px-tall page. Fixed by scrolling only the
+     rail's own `scrollLeft` instead of using `scrollIntoView` at all.
+
+Verified: fire-strip video scale scrubs exactly linearly with scroll progress (checked at
+progress 0.5 → scale 1.07 of 1→1.14 range), menu divider draw scrubs exactly linearly (checked at
+progress 0.5 → `scaleX(0.5)` precisely), gap-glow renders with zero layout overlap/overflow and
+responds to pointer with glow+ripple, zero console errors, zero horizontal overflow at 375px and
+1280px, in Arabic/RTL and English/LTR.
